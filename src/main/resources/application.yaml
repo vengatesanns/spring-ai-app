@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: my-ai-app
+
+
+---
+spring:
+  ai:
+    ollama:
+      base-url: http://127.0.0.1:11434/
+      chat:
+        options:
+          model: gemma3:1b
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      chat:
+        options:
+          model: gpt-4o-mini
+          maxTokens: 200
+    huggingface:
+      chat:
+        # api-key: <>
+        url: http://localhost:7080
