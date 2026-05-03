@@ -1,0 +1,15 @@
+Prompt = Messages + Chat Options
+
+
+
+Roles:
+
+System Msg => You are a salesman in Honda Bike Showroom, Provide Bike details about that brand
+
+	User Msg => What are all the bikes available more than 350cc?
+
+		Assistant Msg => "AI response"
+
+	User Msg => Can I get price of the bikes?
+
+		Assistant Msg => "AI response of specific bikes"
