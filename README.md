@@ -39,18 +39,27 @@ cd spring-ai-app
 
 ## 📚 Topics
 
-| SNO |                Contents                 | Status |
-|-----|:---------------------------------------:|--------|
-| 1   |           Generative AI Intro           | ✅      | 
-| 2   |             Spring AI Intro             | ✅      |
-| 3   |              Model, LLM's               | ✅      |   
-| 4   |    Download and Run Llama 3 in Local    | ✅      |   
-| 5   | Setup Intellij, Java, Maven, SpringBoot | ✅      |   
-| 6   |         Connect Ollama in local         | ✅      |   
-| 7   |      Connect OpenAI with Spring AI      | ✅      |   
-| 8   |    Setup and Run Hugging Facemodels     | ✅      |   
-| 9   |         ChatModel vs ChatClient         |        |   
-| 10  |           Docker Model Runner           |        |   
-| 11  |        Use Multiple Model in App        |        |   
-| 12  |                Messages                 |        |   
-| 13  |             Prompt Template             |        |   
+
+| **SNo** | **Topics**                              | **Status** |
+|---------|-----------------------------------------|:----------:|
+| 1       | Generative AI Intro                     |      ✅     |
+| 2       | Spring AI Intro                         |      ✅     |
+| 3       | Model, LLM's                            |      ✅     |
+| 4       | Download and Run Llama 3 in Local       |      ✅     |
+| 5       | Setup Intellij, Java, Maven, SpringBoot |      ✅     |
+| 6       | Connect Ollama in local                 |      ✅     |
+| 7       | Connect OpenAI with Spring AI           |      ✅     |
+| 8       | Setup and Run Hugging Facemodels        |      ✅     |
+| 9       | ChatModel vs ChatClient                 |      ✅     |
+| 10      | Prompts and Message Roles               |      ✅     |
+| 11      | Prompt Template                         |            |
+| 12      | Chat Client API - Defaults              |            |
+| 13      | Chat Client API - Advisors              |            |
+| 14      |                                         |            |
+| 15      |                                         |            |
+| 16      |                                         |            |
+| 17      |                                         |            |
+| 18      |                                         |            |
+| 19      |                                         |            |
+| 20      |                                         |            |
+| 21      |                                         |            |
