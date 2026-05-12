@@ -52,7 +52,7 @@ cd spring-ai-app
 | 8       | Setup and Run Hugging Facemodels        |      ✅     |
 | 9       | ChatModel vs ChatClient                 |      ✅     |
 | 10      | Prompts and Message Roles               |      ✅     |
-| 11      | Prompt Template                         |            |
+| 11      | Prompt Template                         |      ✅      |
 | 12      | Chat Client API - Defaults              |            |
 | 13      | Chat Client API - Advisors              |            |
 | 14      |                                         |            |
