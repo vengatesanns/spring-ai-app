@@ -16,7 +16,8 @@ spring:
       chat:
         options:
           model: gpt-4o-mini
-          maxTokens: 200
+          max_completion_tokens: 200
+          temperature: 1
     huggingface:
       chat:
         # api-key: <>

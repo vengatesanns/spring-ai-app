@@ -10,9 +10,8 @@ import org.springframework.context.annotation.Configuration;
 public class AppConfig {
 
     @Bean("openAIChatClient")
-    public ChatClient getChatClient(OpenAiChatModel openAiChatModel) {
+    public ChatClient getOpenAIChatClient(OpenAiChatModel openAiChatModel) {
         return ChatClient.builder(openAiChatModel).build();
     }
-
 
 }
