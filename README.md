@@ -33,7 +33,7 @@ AI-powered REST endpoints using the **Spring AI** library.
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/VengatX-YT/spring-ai-app
+git clone https://github.com/vengatesanns/spring-ai-app
 cd spring-ai-app
 ```
 
