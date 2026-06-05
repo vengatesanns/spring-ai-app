@@ -22,3 +22,13 @@ spring:
       chat:
         # api-key: <>
         url: http://localhost:7080
+
+
+logging:
+  level:
+    org:
+      springframework:
+        ai:
+          chat:
+            client:
+              advisor: DEBUG

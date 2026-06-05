@@ -1,0 +1,4 @@
+User Details:
+    Preferred Room: Deluxe
+    Loyalty Tier: Gold
+    Preferred City: Bangalore
