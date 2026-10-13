@@ -10,12 +10,12 @@ spring:
       base-url: http://127.0.0.1:11434/
       chat:
         options:
-          model: gemma3:1b
+          model: gemma3:latest
     openai:
       api-key: ${OPENAI_API_KEY}
       chat:
         options:
-          model: gpt-4o-mini
+          model: gpt-5.5-2026-04-23
           max_completion_tokens: 200
           temperature: 1
     huggingface:
