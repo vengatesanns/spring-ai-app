@@ -2,12 +2,20 @@ package com.vengatx.myaiapp.config;
 
 
 import org.springframework.ai.chat.client.ChatClient;
+import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor;
 import org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor;
+import org.springframework.ai.chat.memory.ChatMemory;
+import org.springframework.ai.chat.memory.ChatMemoryRepository;
+import org.springframework.ai.chat.memory.InMemoryChatMemoryRepository;
+import org.springframework.ai.chat.memory.MessageWindowChatMemory;
+import org.springframework.ai.chat.memory.repository.jdbc.JdbcChatMemoryRepository;
 import org.springframework.ai.ollama.OllamaChatModel;
 import org.springframework.ai.openai.OpenAiChatModel;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
+
+import java.util.List;
 
 @Configuration
 public class AppConfig {
@@ -43,10 +51,18 @@ public class AppConfig {
     }
 
 
+    @Bean
+    public ChatMemory chatMemory(JdbcChatMemoryRepository jdbcChatMemoryRepository) {
+        return MessageWindowChatMemory.builder().maxMessages(1000).chatMemoryRepository(jdbcChatMemoryRepository).build();
+    }
+
+
     @Bean("ollamaChatClient")
-    public ChatClient getOllamaChatClient(OllamaChatModel ollamaChatModel) {
+    public ChatClient getOllamaChatClient(OllamaChatModel ollamaChatModel, ChatMemory chatMemory) {
+        MessageChatMemoryAdvisor messageChatMemoryAdvisor = MessageChatMemoryAdvisor.builder(chatMemory).build();
+        SimpleLoggerAdvisor simpleLoggerAdvisor = new SimpleLoggerAdvisor();
         return ChatClient.builder(ollamaChatModel)
-                .defaultAdvisors(new SimpleLoggerAdvisor())
+                .defaultAdvisors(List.of(messageChatMemoryAdvisor, simpleLoggerAdvisor))
                 .build();
     }
 
